@@ -157,6 +157,22 @@ main a:hover {
     color: var(--cor5);
 }
 
+div.video {
+    background-color: #3b280d;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
 img.patch {
     width: 50%;
 }
@@ -173,6 +189,7 @@ aside ul {
     list-style-position: inside;
     list-style-type: '\1F5F8\00A0';
     columns: 2;
+    margin-bottom: 5px;
 }
 
 aside h3 {
