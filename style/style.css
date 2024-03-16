@@ -1,80 +1,171 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'FonteLogo';
+    src: url(../fonts/bubblegum-sans-regular.otf) format('opentype');
+}
+
+:root {
+    --cor0: #778899;
+    --cor1: #77889996;
+    --cor2: #343b42;
+    --cor3: #966520;
+    --cor4: #FFB12B;
+    --cor5: #3b280d;
+    --fonte-padrao: Arial, Verdana, Helveticam sans-serif;
+    --fonte-poppins: 'Poppins', cursive;
+    --fonte-sora: 'Sora', cursive;
+    --fonte-destaque: 'FonteLogo', cursive;
+    
+}
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family: var(--fonte-poppins);
     margin: 0;
     padding: 0;
 }
 
-html {
-    width: 100vw;
-    height: 100vh;
-}
-
-body {
-    background-color: darkgray;
+.interface {
+    max-width: 80vw;
+    margin: auto;
 }
 
 header {
-    background-color: rgb(165, 165, 165);
+    background-color: var(--cor0);
+    width: 100%;
 }
 
-header h1 {
-    padding: 10px;
-    text-align: center;
+.top-header {
+    background-color: #77889996;
+    box-shadow: 2px 2px 4px #00000091;
+    padding: 12px 4%;
 }
 
-#burguer {
-    background-color: rgb(27, 27, 27);
-    color: white;
+.top-header .interface {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-header .img-logo img {
+    max-width: 150px;
+}
+
+.top-header .btn-social button {
+    color: var(--cor3);
+    background-color: transparent;
+    border: 1px solid var(--cor3);
+    border-radius: 50%;
+    font-size: 25px;
     cursor: pointer;
-    display: block;
-    padding: 10px;
-    text-align: center;
+    height: 50px;
+    width: 50px;
 }
 
-#burguer:hover {
-    background-color: white;
-    color: black;
+.btn-social button:hover  {
+    color: #000;
+    background-color: orange;
+    transition: .5s;
 }
 
-menu {
-    display: none;
+body {
+    background-image: url(../imagens/Wallpaper_2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
-menu > ul {
+.bottom-header nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     list-style-type: none;
 }
 
-menu > ul >li > a {
-    background-color: rgb(46, 46, 46);
-    border-top: 2px solid gray;
-    color: white;
+
+.bottom-header nav ul li a{
+    color: #fff;
     display: block;
+    font-weight: 600;
     padding: 10px;
-    text-align: center;
     text-decoration: none;
 }
 
-menu > ul > li > a:hover {
-    background-color: gray;
+.bottom-header nav ul li a:hover {
+    background-color: #2166ac;
+    color: var(--cor4);
+    transition: .5s;
 }
 
-main {
+/* .drop-menu {
+    position: relative;
+} */
+
+/* .drop-menu .sub-menu-1 {
+    background-color: #77889996;
+    box-shadow: 2px 2px 8px lightslategray;
+    height: 0;
+    position: absolute;
+    overflow: hidden;
+    transition: .7s;
+} */
+
+.drop-menu .sub-menu-1 a {
+    padding: 5px ;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.drop-menu:hover .sub-menu-1 {
+    background-color: #77889996;
+    box-shadow: 2px 2px 8px lightslategray;
+    display: block;
+    /* height: 0; */
+    position: absolute;
+    /* overflow: hidden; */
+    transition: .7s;
+}
+
+.drop-menu:hover .sub-menu-1 ul {
+    display: block;
+}
+
+.drop-menu:hover .sub-menu-1 ul li{
+    /* text-align: right; */
     border-radius: 10px;
-    background-color: white;
-    margin: auto;
-    margin-top: 10px;
-    padding: 10px;
-    width: 90vw;
+    transition: 0.7s;
 }
 
-article > h2 {
-    padding-bottom: 20px;
+.sub-menu-2 {
+    display: none;
 }
 
-article > p {
-    margin-bottom: 20px;
-    text-align: justify;
-    text-indent: 25px;
+.drop-menu-2:hover .sub-menu-2{
+    background-color: #778899;
+    display: block;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 150px;
+    width: 120px;
+}
+
+.sub-menu-3 {
+    display: none;
+}
+
+.drop-menu-3:hover .sub-menu-3 {
+    background-color: #778899;
+    display: block;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 110px;
+    width: 120px;
 }

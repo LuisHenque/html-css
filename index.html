@@ -3,52 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/engine_ss2.png" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/mediaq.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    
-    <title>Media Query</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Treinando</title>
 </head>
-<body onresize="mudouTamanho()">
+<body>
     <header>
-        <h1>Meu Site</h1>
-        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">Menu</span>
-        <menu id="menuitens">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Produtos</a></li>
-                <li><a href="">Revendas</a></li>
-                <li><a href="">Catalogo</a></li>
-                <li><a href="">Fale Conosco</a></li>
-                <li><a href="https://www.youtube.com/watch?v=67W4NdxW1kw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=37" target="_blank">Sobre</a></li>
-            </ul>
-        </menu>
+        <section class="top-header">
+            <div class="interface">
+                <div class="img-logo">
+                    <img src="imagens/seu-logo.png" alt="logo da empresa">
+                </div>
+                <div class="btn-social">
+                    <a href="https://www.linkedin.com/in/luis-henrique-41b6512a9/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+                    <a href="https://github.com/LuisHenque" target="_blank"><button><i class="bi bi-github"></i></button></a>
+                    <a href="http://localhost/phpmyadmin/" target="_blank"><button><i class="bi bi-database-check"></i></button></a>
+                </div>
+            </div>
+        </section>
+        <section class="bottom-header">
+            <div class="interface">
+                <div class="flex">
+                    <nav>
+                        <ul>
+                            <li><a href="#">ADMINISTRATIVO</a></li>
+                            <li><a href="#">COMERCIAL</a></li>
+                            <li class="drop-menu"><a href="#">CADASTROS <i class="bi bi-caret-down-fill"></i></a>
+                                <div class="sub-menu-1">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Produtos <i class="bi bi-caret-right-fill"></i></a>
+                                        </li>
+                                        <li class="drop-menu-2"><a href="#">Clientes <i class="bi bi-caret-right-fill"></i></a>
+                                            <div class="sub-menu-2">
+                                                <ul>
+                                                    <li><a href="#">Cadastro</a></li>
+                                                    <li><a href="#">Lista Todos</a></li>
+                                                    <li class="drop-menu-3"><a href="#">Outros <i class="bi bi-caret-right-fill"></i></a>
+                                                        <div class="sub-menu-3">
+                                                            <ul>
+                                                                <li><a href="#">Outros_1</a></li>
+                                                                <li><a href="#">Outros_2</a></li>
+                                                                <li><a href="#">Outros_3</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">Fornecedores <i class="bi bi-caret-right-fill"></i></a></li>
+                                        <li><a href="#">Fornecedores22 <i class="bi bi-caret-right-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">COMPRAS</a></li>
+                            <li><a href="#">SUPRIMENTOS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
     </header>
-    <main>
-        <article>
-            <h2>Testando Media Query</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit odio ipsum officia, sunt maiores ducimus rerum, optio similique asperiores eligendi ex ipsam? Exercitationem distinctio harum quam modi enim quo dolorum! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat ad, dolorem deserunt quidem repellendus iste tenetur optio incidunt id et expedita nemo necessitatibus corporis molestias omnis sunt non provident delectus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, aliquid. Aliquam doloremque doloribus dignissimos obcaecati assumenda. Officiis aliquam molestias illo? Quis consectetur impedit distinctio molestiae veritatis reiciendis ipsa animi! Eos.</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio animi aliquid nihil culpa voluptatum, rem minima consequatur, ipsa, quidem ratione doloremque debitis molestias. Voluptates error quisquam aliquam, ipsam molestias aut? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aut iusto, placeat impedit, voluptas asperiores laboriosam officiis, ducimus quod expedita repellendus. Asperiores non reprehenderit, impedit tenetur officiis sunt quos suscipit!</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quod sapiente, possimus ullam repudiandae accusamus maxime fugit aliquid quibusdam minus repellat illo facere ipsam dolore ut iste id dolor quam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia fugit dignissimos necessitatibus reprehenderit voluptatum temporibus sunt, nam quam ullam quibusdam, illum aliquid! Nesciunt laudantium, esse corrupti aut odit quo? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor molestias incidunt earum distinctio quos fugiat saepe delectus modi odio blanditiis ad excepturi at consequatur hic, similique a, quis exercitationem ipsum?</p>
-        </article>
-    </main>
-    <script>
-        function mudouTamanho() {
-            if (window.innerWidth >= 768) {
-                menuitens.style.display = 'block'
-            } else {
-                menuitens.style.display = 'none'
-            }
-        }
-        function clickMenu() {
-            if (menuitens.style.display == 'block') {
-                menuitens.style.display = 'none'
-            } else {
-                menuitens.style.display = 'block'
-            }
-        }
-    </script>
+    <main></main>
+    <footer></footer>
 </body>
 </html>
